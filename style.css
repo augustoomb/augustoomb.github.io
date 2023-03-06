@@ -1,0 +1,359 @@
+/* GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    /* background-color: #DAE3E7; */
+  }
+
+body {
+  font-family: 'Lato', arial, sans-serif;
+  font-size: 16px;
+  color: #434343;
+  line-height: 1.5;
+  padding-top: 10px;
+  /* padding-bottom: 10px; */
+  background-color: #DAE3E7;
+  display: grid;
+  width: 100%;
+  /* height: 3000px; */
+  grid-template-areas: 
+    "header header"
+    "main nav"
+    "footer footer";
+    grid-template-rows: 250px 1fr 30px;
+    grid-template-columns: 65% 35%;
+}
+
+/* a:visited, a:active {
+  text-decoration: none;
+  color: #434343;
+} */
+
+a {
+  color: #065e74;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #49515a;
+  font-size: 38px;
+}
+
+/* GRID PRINCIPAL */
+
+body > header {
+  margin-top: 10px;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+body > main {
+  padding-top: 45px;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: #DAE3E7;
+}
+
+body > nav {
+  padding-top: 45px;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #DAE3E7;
+}
+
+body > footer {
+  grid-area: footer;
+  background-color: #DAE3E7;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+}
+
+footer > small {
+  margin-top: 20px;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #065E74;
+  margin-bottom: 0px;
+}
+
+
+/* HEADER */
+.content-header {
+  width: 100%;
+  margin-left: 3%;
+  margin-right: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.occupation > h2 {
+  color: #778492;
+  font-family: "Lato", arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+
+main > *, nav > * {
+  text-align: justify;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 3%;
+}
+
+main > * {
+  width: 90%;
+  
+}
+
+nav > * {
+  width: 80%;
+}
+
+main > div > h2, nav > div > h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #545e69;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+main > div > h3, nav > div > h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #778492;
+  font-size: 20px;
+}
+
+
+/* my-info */
+.my-info {
+  display: flex;
+  align-items: center;
+}
+
+#item-personal-photo {
+  border-radius: 100%;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  transform: scale(0.6);
+}
+
+.personal-content {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-evenly;
+}
+
+#button-talk-to-me, #button-curriculum {
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Montserrat', arial, sans-serif;
+  font-weight: bold;
+}
+
+#button-talk-to-me {
+  background-image: linear-gradient(#065e74, #3C7F90);
+}
+
+#button-talk-to-me:hover {
+  background-image: linear-gradient(#3C7F90, #065e74);
+}
+
+#button-curriculum {
+  background-image: linear-gradient(#49515A, #778492);
+}
+
+#button-curriculum:hover {
+  background-image: linear-gradient(#778492, #49515A);
+}
+
+.company {
+  font-weight: 400;
+}
+
+.div-skill-buttons {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.skill-button {
+  border-radius: 5px;
+  background-color: #6EC3D8;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-family: 'Montserrat', arial, sans-serif;
+  font-weight: bold;
+  margin: 3px;
+}
+
+.testimonials-content {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: space-between;
+}
+
+#text-testimonials-content {  
+  border-left: 4px solid #6EC3D8;
+  padding-left: 15px;
+}
+
+#text-testimonials {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #778492;
+  font-size: 16px;
+}
+
+#text-testimonials > i {
+  color: #6EC3D8;
+}
+
+.testimonials-author {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: #778492;
+}
+
+#testimonials-author-name {
+  font-weight: bold;
+}
+
+.languages {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #778492;
+  font-size: 16px;
+}
+
+.lang-text {
+  font-weight: normal;
+}
+
+/* .latest-projects > *:not(h2) { */
+.text-latest-projects > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.latest-projects > img {
+  max-width: 100%;
+  height: auto;
+  /* border: transparent; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text-latest-projects {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #778492;
+}
+
+.text-latest-projects > h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #778492;
+  font-size: 23px;
+}
+
+.latest-projects > p > span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1042px) {
+  .header-buttons {
+    display: none;
+  }
+
+  body {
+    /* font-size: 16px; */
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+      "header"
+      "main"
+      "nav"
+      "footer";
+      grid-template-rows: 250px 0.7fr 0.3fr 30px;
+      grid-template-columns: 100%;
+  }
+
+  body > main {
+    align-items: center;
+  }
+
+  main > * {
+    margin: 0px;
+  }
+
+  body > nav {
+    align-items: center;
+    width: 100%;
+  }
+
+  nav > * {
+    margin: 0px;
+    width: 90%;
+  }
+  
+}
+
+.border {
+  border-bottom: 1px solid #778492;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.item-other-projects {
+  margin-bottom: 50px;
+}
+
+.other-projects > div > h3 {
+  color: #778492;
+}
